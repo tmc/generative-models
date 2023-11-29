@@ -21,7 +21,7 @@ compile-requirements-docker: ## Compile requirements.in to requirements.txt (in 
 		--target final \
 		-t sd-compile-requirements \
 		-f ../scripts/Dockerfile.compile-requirements \
-		.
+		..
 	# Run the docker image (to copy the requirements.txt file out)
 	docker run --platform=linux/amd64 \
 		--gpus all \
