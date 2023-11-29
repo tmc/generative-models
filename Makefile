@@ -8,13 +8,13 @@ endif
 	python3 -m venv --clear .venv
 	.venv/bin/pip install wheel pip-tools
 	.venv/bin/pip install -r requirements/$(REQUIREMENTS_FILE)
-	.venv/bin/pip install .
 
 .PHONY: test
 test: test-inference ## Run tests
 
 .PHONY: test-inference
 test-inference: .venv ## Run inference tests
+	.venv/bin/pip install .
 	.venv/bin/pip install -e git+https://github.com/Stability-AI/datapipelines.git@main#egg=sdata
 	.venv/bin/pytest -v tests/inference/test_inference.py
 
