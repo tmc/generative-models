@@ -1,4 +1,5 @@
---find-links https://download.pytorch.org/whl/torch_stable.html
+--index-url https://download.pytorch.org/whl/cu118
+--extra-index-url https://pypi.python.org/simple
 black==23.7.0
 chardet==5.1.0
 clip @ git+https://github.com/openai/CLIP.git
